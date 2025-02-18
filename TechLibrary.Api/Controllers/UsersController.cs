@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TechLibrary.Application.Users.Register;
+using TechLibrary.Application.UseCases.Users.Register;
 using TechLibrary.Communication.Requests;
 using TechLibrary.Communication.Responses;
 
@@ -16,6 +16,7 @@ public class UsersController : ControllerBase
         [FromBody] RequestRegisterUserJson request)
     {
         var response = await useCase.Execute(request);
-        return Created();
+
+        return Created(string.Empty, response);
     }
 }

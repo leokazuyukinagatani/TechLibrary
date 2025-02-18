@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using TechLibrary.Application.Users.Register;
+using TechLibrary.Application.UseCases.Users.Register;
 
 namespace TechLibrary.Application;
 public static class DependencyInjectionExtension
